@@ -56,7 +56,7 @@ const login = async (req = request, res = response) => {
 
 
 const register = async (req = request, res = response) => {
-    const { username, password } = req.body;
+    const { username, password, role } = req.body;
     
     if (!username || !password) {
         return res.status(400).json({
@@ -78,7 +78,7 @@ const register = async (req = request, res = response) => {
         const newUser = new User({
             username,
             password: hashedPassword,
-            role: 'user'    //como defininimos un valor por defecto en el modelo, 
+            role    //como defininimos un valor por defecto en el modelo, 
                             //este se puede omitir
         });
 
