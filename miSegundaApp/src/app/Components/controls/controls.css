@@ -1,0 +1,10 @@
+.controls{
+    margin-bottom: 15px;
+    display: flex;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+button{
+    border-radius: 8px;
+}

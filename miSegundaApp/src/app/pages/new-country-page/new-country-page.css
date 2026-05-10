@@ -1,0 +1,48 @@
+/* Contenedor principal del formulario */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espacio entre cada campo */
+  max-width: 400px; /* Ancho máximo para que no se estire de más en PC */
+  margin: 20px auto; /* Centra el formulario en la página */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para todos los inputs y el select */
+.form input, 
+.form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px; /* Tamaño ideal para que no se haga zoom en móviles */
+  width: 100%;
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+
+/* Estilo para el botón de submit */
+.form button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Media Query para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .form {
+    max-width: 90%; /* En celulares ocupa casi todo el ancho */
+    margin: 10px auto;
+  }
+}

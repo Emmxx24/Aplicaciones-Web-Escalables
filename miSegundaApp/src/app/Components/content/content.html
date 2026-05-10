@@ -1,0 +1,31 @@
+<!-- <p>content works!</p> -->
+<!-- <div class="containter">
+  <div class="card">
+    <img src="{{ country().flag }}" alt="{{ country().name }}" />
+    <img [src]="country().flag" [alt]="country().name"/>
+    <h2>{{ country().name }}</h2>
+    <p>Capital: {{ country().capital }}</p>
+    <p>Population: {{ country().population }}</p>
+    <p>Region: {{ country().region }}</p>
+  </div>
+</div> -->
+<!-- <div class="container">
+  @for (country of countries(); track country.name) { -->
+      <!-- <div class="card">
+        <img src="{{ c.flag }}" alt="{{ c.name }}" /> -->
+        <!-- <img [src]="c.flag" [alt]="c.name"/> -->
+        <!-- <h2>{{ c.name }}</h2>
+        <p>Capital: {{ c.capital }}</p> -->
+        <!-- <p>Population: {{ c.population }}</p> -->
+        <!-- <p [class.highlight]="c.population > 30000000">Population: {{c.population}}</p>
+        <p>Region: {{ c.region }}</p>
+      </div> -->
+      <!-- <app-country-card [country] = "country"></app-country-card>
+  }
+</div> -->
+<app-controls (sortByName)="orderByName()" (sortByPopulation)="orderByPopulation()"></app-controls>
+<div class="container">
+  @for (country of countries(); track country.name) {
+      <app-country-card [country] = "country"></app-country-card>
+  }
+</div>
