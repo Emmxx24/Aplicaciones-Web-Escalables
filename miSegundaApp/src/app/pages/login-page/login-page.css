@@ -1,0 +1,77 @@
+/* Contenedor principal (Tarjeta) */
+.login-card {
+  max-width: 400px;
+  margin: 50px auto; /* Centra la tarjeta horizontalmente */
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Título */
+.login-card h2 {
+  text-align: center;
+  color: #333333;
+  margin-bottom: 25px;
+  margin-top: 0;
+}
+
+/* Contenedor de cada input */
+.form-group {
+  margin-bottom: 18px;
+}
+
+/* Etiquetas (Labels) */
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #555555;
+  font-weight: bold;
+}
+
+/* Campos de texto y contraseña */
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box; /* Evita que el padding aumente el tamaño total */
+  transition: border-color 0.3s ease;
+}
+
+/* Efecto al hacer clic/enfocar el input */
+.form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Botón de envío */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto hover del botón (solo si no está deshabilitado) */
+button:hover:not([disabled]) {
+  background-color: #0056b3;
+}
+
+/* Estilo para el botón deshabilitado de Angular */
+button[disabled] {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}

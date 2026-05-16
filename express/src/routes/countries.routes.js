@@ -4,7 +4,7 @@ const { verifyJWT } = require("../middlewares/verifyJWT");
 const { verifyAdminRole } = require("../middlewares/verifyAdminRole");
 const router = Router();
 
-router.get("/", [verifyJWT, verifyAdminRole], getCountries);
+router.get("/", /*[verifyJWT, verifyAdminRole],*/ getCountries);
 
 router.get("/:id", getCountryById);
 
