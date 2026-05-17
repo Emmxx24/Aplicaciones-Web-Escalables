@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http';
+import { Token } from '@angular/compiler';
 import { computed, inject, Injectable, signal } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -41,5 +42,11 @@ export class AuthService {
           }
         }
       )
+  }
+
+  logout(){
+    this._token.set(null);
+    localStorage.removeItem("token");
+    this.router.navigate(['/login']);
   }
 }
